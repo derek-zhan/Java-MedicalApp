@@ -33,7 +33,7 @@
         android:layout_alignBottom="@+id/datePicker1"
         android:layout_alignParentRight="true"
         android:onClick="open"
-        android:text="Open" />
+        android:text="Opefdasdfasdan" />
 
     <ListView
         android:id="@+id/listView1"
