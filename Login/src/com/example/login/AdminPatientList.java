@@ -61,29 +61,29 @@ public class AdminPatientList extends Activity {
 		dialogButton.setOnClickListener(new OnClickListener() {
 			@Override
 			public void onClick(View v) {
+				//put write methods here into database to remove patient
 				dialog.dismiss();
     			Intent restart = new Intent(AdminPatientList.this, AdminPatientList.class);
     			restart.putExtra("type", userType);
     			startActivity(restart);
 			}
-			//put write methods here into database to save patient
 			
 		});
 		
 		
 		final Dialog dialog2 = new Dialog(this);
 		dialog2.setContentView(R.layout.popup2);
-		dialog2.setTitle("Remove Patient");
+		dialog2.setTitle("Add Doctor");
 		Button dialog2Button = (Button) dialog2.findViewById(R.id.dialogButtonOK);
 		dialog2Button.setOnClickListener(new OnClickListener() {
 			@Override
 			public void onClick(View v) {
+				//put write methods here into database to remove patient
 				dialog2.dismiss();
     			Intent restart = new Intent(AdminPatientList.this, AdminPatientList.class);
     			restart.putExtra("type", userType);
     			startActivity(restart);
 			}
-			//put write methods here into database to remove patient
 			
 		});
 		
@@ -100,6 +100,16 @@ public class AdminPatientList extends Activity {
 		
         Button removePatientButton = (Button)findViewById(R.id.removePatient);
 		removePatientButton.setOnClickListener(new View.OnClickListener(){
+	        public void onClick(View v) {
+    			Intent restart = new Intent(AdminPatientList.this, RemoveAdminPatientList.class);
+    			restart.putExtra("type", userType);
+    			startActivity(restart);
+	        }
+
+		});
+		
+        Button addDoctorButton = (Button)findViewById(R.id.addDoctor);
+        addDoctorButton.setOnClickListener(new View.OnClickListener(){
 	        public void onClick(View v) {
 				dialog2.show();
 	        }

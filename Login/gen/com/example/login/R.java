@@ -55,6 +55,7 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
         public static final int BloodPressure=0x7f0b0023;
         public static final int BloodPressureHeading=0x7f0b0022;
         public static final int BmiCalc=0x7f0b0016;
+        public static final int Cancel=0x7f0b003d;
         public static final int Conditions=0x7f0b0027;
         public static final int ConditionsHeading=0x7f0b0026;
         public static final int Drug=0x7f0b000b;
@@ -82,12 +83,12 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
         public static final int Profile=0x7f0b0018;
         public static final int Weight=0x7f0b001f;
         public static final int WeightHeading=0x7f0b001e;
-        public static final int action_settings=0x7f0b003d;
+        public static final int action_settings=0x7f0b003e;
+        public static final int addDoctor=0x7f0b0004;
         public static final int addPatient=0x7f0b0002;
         public static final int button1=0x7f0b000a;
         public static final int datePicker1=0x7f0b0035;
         public static final int dialogButtonOK=0x7f0b0039;
-        public static final int editPatent=0x7f0b0004;
         public static final int editText1=0x7f0b0009;
         public static final int height=0x7f0b0006;
         public static final int lastName=0x7f0b003c;
@@ -136,6 +137,8 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
         public static final int popup=0x7f030014;
         public static final int popup1=0x7f030015;
         public static final int popup2=0x7f030016;
+        public static final int popup3=0x7f030017;
+        public static final int popup4=0x7f030018;
     }
     public static final class menu {
         public static final int admin_patient_list=0x7f0a0000;

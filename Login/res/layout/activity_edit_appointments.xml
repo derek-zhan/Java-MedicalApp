@@ -24,7 +24,6 @@
         android:layout_height="wrap_content"
         android:layout_alignLeft="@+id/timePicker1"
         android:layout_below="@+id/timePicker1"
-        android:layout_marginTop="59dp"
         android:ems="10"
         android:inputType="textMultiLine" >
 
@@ -37,7 +36,6 @@
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
         android:layout_alignRight="@+id/editText1"
-        android:layout_marginBottom="53dp"
         android:onClick="save"
         android:text="Save" />
 

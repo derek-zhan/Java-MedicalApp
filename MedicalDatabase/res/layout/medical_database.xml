@@ -1,0 +1,67 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context=".TestDatabaseActivity" >
+
+    <EditText
+        android:id="@+id/txt_FirstName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="@string/firstname" />
+
+    <EditText
+        android:id="@+id/txt_LastName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/txt_FirstName"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="@string/lastname" >
+
+        <requestFocus />
+    </EditText>
+
+    <Button
+        android:id="@+id/btn_Save"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/txt_FirstName"
+        android:layout_alignParentRight="true"
+        android:layout_alignTop="@+id/txt_FirstName"
+        android:layout_toRightOf="@+id/txt_FirstName"
+        android:onClick="OnClick_SaveName"
+        android:text="@string/save"
+        android:textSize="14sp" />
+
+    <Button
+        android:id="@+id/btn_Display"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/txt_LastName"
+        android:layout_alignLeft="@+id/btn_Save"
+        android:layout_alignRight="@+id/btn_Save"
+        android:layout_alignTop="@+id/txt_LastName"
+        android:onClick="OnClick_Display"
+        android:text="@string/display"
+        android:textSize="14sp" />
+
+    <TextView
+        android:id="@+id/lbl_Display"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/txt_LastName"
+        android:layout_alignParentBottom="true"
+        android:layout_alignRight="@+id/btn_Display"
+        android:layout_below="@+id/txt_LastName" />
+
+</RelativeLayout>

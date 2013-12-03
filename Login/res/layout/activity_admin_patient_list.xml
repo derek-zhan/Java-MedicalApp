@@ -29,10 +29,10 @@ android:layout_height="wrap_content" >
         android:text="Remove Patient" />
     
     <Button
-        android:id="@+id/editPatent"
+        android:id="@+id/addDoctor"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Edit Patient" />
+        android:text="Add Doctor" />
     
 
 </LinearLayout>

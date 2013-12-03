@@ -66,7 +66,7 @@ public class ViewAppointments extends Activity {
 		long currentTime = Long.parseLong(year + month + formatday + formathour + formatminute);
 		
 		//Get alert time and appointment title from database
-		long alertTime = 201312020420l; 
+		long alertTime = 201312021900l; 
 		
 		//for creating dialog
 		if (alertTime - currentTime <= (100) && alertTime - currentTime >= 0){
@@ -135,7 +135,9 @@ public class ViewAppointments extends Activity {
 		            intent.putExtra("type",userType);
 	                adapter.notifyDataSetChanged();
 	                view.setAlpha(1);
+	                if (userType.equals("doctor") || userType.equals("admin")){
 	                startActivity(intent);
+	                }
 	              }
 	            });
 	      }

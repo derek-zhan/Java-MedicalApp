@@ -6,6 +6,11 @@ import android.os.Build;
 import android.os.Bundle;
 import android.app.Activity;
 import android.content.Intent;
+import android.app.AlertDialog;
+import android.app.AlertDialog.Builder;
+import android.app.Dialog;
+import android.content.DialogInterface;
+import android.support.v4.app.NavUtils;
 import android.support.v4.app.NavUtils;
 import android.widget.LinearLayout;
 import android.view.Menu;
@@ -19,6 +24,8 @@ import android.widget.TextView;
 public class RemoveAdminPatientList extends Activity {
 	String patientList[];
 	String userType;
+	
+	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
@@ -47,17 +54,23 @@ public class RemoveAdminPatientList extends Activity {
 		}
 
 		
-		}
+		
+	}	
 
-    public OnClickListener clickListener = new OnClickListener() {
+
+	public OnClickListener clickListener = new OnClickListener() {
         public void onClick(View v) {
-           
-                          Intent patientProfile = new Intent(getApplicationContext(), AdminPatientList.class);
-                          patientProfile.putExtra("type", userType);
-                          startActivity(patientProfile);      
+        				//removal methods
+        	
+        	// start here
+			Intent restart = new Intent(RemoveAdminPatientList.this, AdminPatientList.class);
+			restart.putExtra("type", userType);
+			startActivity(restart);
         }
     };
     
+
+	
 	@Override
 	public boolean onCreateOptionsMenu(Menu menu) {
 		// Inflate the menu; this adds items to the action bar if it is present.

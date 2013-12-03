@@ -2,6 +2,7 @@
 
 package com.example.login;
 import android.app.Activity;
+import android.app.Dialog;
 
 
 import android.content.Intent;
@@ -20,7 +21,7 @@ import static java.lang.System.out;
 public class MainActivity extends Activity {
 
 	public void onBackPressed() {
-		
+		System.exit(0);
 	}
 	
     @Override
@@ -32,6 +33,24 @@ public class MainActivity extends Activity {
         final EditText userID = (EditText)findViewById(R.id.userID);
         final EditText password = (EditText)findViewById(R.id.password);
         Button mButton = (Button)findViewById(R.id.submitButton);
+        
+        
+		final Dialog dialog = new Dialog(this);
+		dialog.setContentView(R.layout.popup4);
+		dialog.setTitle("Invalid ID or Password");
+
+		TextView text1 = (TextView) dialog.findViewById(R.id.text1);
+		text1.setText("Your ID and/or password is invalid");
+		
+		Button dialogButton = (Button) dialog.findViewById(R.id.dialogButtonOK);
+		// if button is clicked, close the custom dialog
+		dialogButton.setOnClickListener(new OnClickListener() {
+			@Override
+			public void onClick(View v) {
+				dialog.dismiss();
+			}
+			//put write methods here into database to save patient
+		});
         
         
      
@@ -69,6 +88,10 @@ public class MainActivity extends Activity {
         			mMenu.putExtra("type", userType);
         			startActivity(mMenu);
             			
+        		}
+        		
+        		else {
+        			dialog.show();
         		}
         		
     	

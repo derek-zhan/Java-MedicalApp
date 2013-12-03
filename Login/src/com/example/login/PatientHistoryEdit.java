@@ -24,9 +24,12 @@ public class PatientHistoryEdit extends Activity {
                 super.onCreate(savedInstanceState);
                 setContentView(R.layout.activity_patient_history_edit);
                 
+                
                
                 Intent i = getIntent();
+                
         		final String username = i.getStringExtra("user");
+        		final String userType = i.getStringExtra("type");
                
                 TextView name = (TextView) findViewById(R.id.Name);
                 final EditText height = (EditText) findViewById(R.id.Height);
@@ -79,6 +82,14 @@ public class PatientHistoryEdit extends Activity {
                 		
                 		/* put write methods once database is finished by simply using write methods*/
                        
+                		
+                		// -----------------------------
+                		
+    	    			Intent profileMenu = new Intent(PatientHistoryEdit.this, ProfileMenu.class);
+    	    			profileMenu.putExtra("user", username);
+    	    			profileMenu.putExtra("type", userType);
+    	    			startActivity(profileMenu);
+                		
                 }});
         }
  
